@@ -50,6 +50,11 @@ void Monster::Heal(int heal_value)
 	hp_ += heal_value;
 }
 
+void Monster::GetSpeed(int speed)
+{
+	speed = speed_;
+}
+
 
 bool Monster::IsAlive()
 {

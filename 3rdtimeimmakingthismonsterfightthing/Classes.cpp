@@ -83,14 +83,27 @@ int main()
 		player1.GetDamage(5);
 		std::cout << player1.get_name() << " hp = " << player1.get_hp() << std::endl;
 
+		player2.GetDamage(5);
+		std::cout << player2.get_name() << " hp = " << player2.get_hp() << std::endl;
+
 		if (player1.get_hp() <= 0)
 		{
 			std::cout << player1.get_name() << " is dead......" << std::endl;
+			std::cout << player2.get_name() << " won" << std::endl;
+			break;
 			
+		}
+
+		if (player2.get_hp() <= 0)
+		{
+			std::cout << player2.get_name() << " is dead......" << std::endl;
+			std::cout << player1.get_name() << " won" << std::endl;
+			break;
+
 		}
 
 		//orc.Heal(2);
 
-	} while (player1.get_hp() > 0);
+	} while (player1.get_hp() > 0 || player2.get_hp() > 0);
 
 }

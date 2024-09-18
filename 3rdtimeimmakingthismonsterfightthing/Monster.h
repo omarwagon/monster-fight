@@ -24,6 +24,7 @@ public:
 
 	void GetDamage(int damage);
 	void Heal(int heal_value);
+	void GetSpeed(int speed);
 
 	bool IsAlive();
 
